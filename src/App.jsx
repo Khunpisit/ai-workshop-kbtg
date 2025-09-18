@@ -5,6 +5,9 @@ export default function App() {
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 flex flex-col items-center p-8">
       <div className="w-full max-w-2xl">
         <h1 className="text-3xl font-bold text-slate-800 mb-4">React + Vite + Tailwind</h1>
+        <p className="text-4xl font-extrabold bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 tracking-tight mb-6 drop-shadow-sm">
+          Hello KBTG
+        </p>
         <p className="text-slate-600 mb-6">Edit <code className="px-1 py-0.5 bg-slate-200 rounded text-sm">src/App.jsx</code> and save to test HMR.</p>
         <div className="grid gap-4 sm:grid-cols-2 mb-8">
           <a href="https://vite.dev/guide/" target="_blank" rel="noreferrer" className="group block rounded-lg border border-slate-200 bg-white p-4 shadow-sm hover:shadow transition">
