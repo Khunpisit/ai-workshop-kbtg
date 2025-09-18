@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import { useState, useMemo } from 'react';
 
 export default function Datepicker() {
   const [selectedDate, setSelectedDate] = useState(null);
@@ -7,7 +7,13 @@ export default function Datepicker() {
   const [currentMonth, setCurrentMonth] = useState(today.getMonth());
   const [currentYear, setCurrentYear] = useState(today.getFullYear());
 
-  const formattedDate = selectedDate ? selectedDate.toLocaleDateString() : '';
+  const formatDate = (d) => {
+    const dd = String(d.getDate()).padStart(2, '0');
+    const mm = String(d.getMonth() + 1).padStart(2, '0');
+    const yyyy = d.getFullYear();
+    return `${dd}-${mm}-${yyyy}`;
+  };
+  const formattedDate = selectedDate ? formatDate(selectedDate) : '';
   const weekdays = ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'];
 
   const daysInMonth = (year, month) => new Date(year, month + 1, 0).getDate();
